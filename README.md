@@ -12,12 +12,12 @@ Fairly self explanatory, this is meant to put your discord bot key which can be 
 
 ### TARGET-PERSON
 
-This enviroment variable is meant for the "your" event listed below. Replace the ``TARGET-PERSON`` text with a discord id of a person you wish to trigger this event every time they type any correct form of "your". *This should be an int so do not include any quotes around this number.*
+This enviroment variable is meant for the ``ANNOYING "YOUR" EVENT`` listed below. Replace the ``TARGET-PERSON`` text with a discord id of a person you wish to trigger this event every time they type any correct form of "your". *This should be an int so do not include any quotes around this number.*
 
-An easy way to get someone's discord id is to type \@person'sID#1234 in a server which they are found in and discord should automatically display an arrangements of characters like <@!1231232131231231> when you send the message. Just copy the number and that is how you get a person's discord id.
+An easy way to get someone's discord id is to type \@person#1234 in a server which they are found in and discord should automatically display an arrangements of characters like <@!1231232131231231> when you send the message. Just copy the number and that is how you get a person's discord id. Additionally, there is a way to go into discord developer mode which I suggest you do more research in if that is what you want to do.
 ## MAIN.PY
 
-This is where all the gross and "not-so-fun" parts are stored. We have our traditional *on_ready* alert, unique command prefix, unload, load, reload functions. Fairly self explanatory but if you are new the load functions are meant to update specific cog files in real time when we call them without needing to restart the entire bot.
+This is where all the gross and "not-so-fun" parts are stored. We have our traditional *on_ready* alert, unique command prefix, unload, load, reload functions. Fairly self explanatory but if you are new discord.py, the load functions are meant to update specific cog file without needing to restart the entire bot.
 
 **PLANS FOR FUTURE RELEASES::**
 - react with a 👍 when we call any of the load commands
@@ -36,7 +36,7 @@ The purpose of ``EVENTS.PY`` is to have a category to store all the event listen
 
 #### *ANNOYING "YOUR" EVENT*
 
-The motivation behind this "middle-finger" of an event is that I wanted to annoy a specific friend on discord and always send a rather comical gif each type a message of his included any form of "your". To do this I created a regex pattern to detect if any message has an *acceptable* form of the word "your" inside of it. If it does then it would then check if the ``TARGET-PERSON`` sent it, and if so they automatically send the gif.
+The motivation behind this "middle-finger" of an event is that I wanted to annoy a specific friend on discord and always send a *rather comical* gif each type a message of his included any form of "your". To do this I created a regex pattern to detect if any message has an *acceptable* form of the word "your" inside of it. If it does then it would then check if the ``TARGET-PERSON`` and send the gif.
 
 However, during this development I wanted everyone else on the server to be annoyed at me. So I decided to include an opportunity for everyone else that is not the ``TARGET-PERSON`` to experience this event. My solution was to implement a random 1/20 chance of the gif sending each time a person sent any form of "your" using the *random library*.
 
@@ -44,7 +44,7 @@ However, during this development I wanted everyone else on the server to be anno
 
 Well for this one there really is not an elaborate reason for making this feature, I just wanted to have my bot react to a message using an emoji. To do this I used the *random library* to create a 1/20 chance of reacting to any message with the 😳 and another 1/20 chance to react with 😨.
 
-**PLANS FOR FUTURE RELEASES::**
+**PLANS FOR FUTURE RELEASES:**
 - react to certain sent messages with a specific emoji
 - custom server emoji integration
 
