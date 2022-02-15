@@ -6,14 +6,12 @@ class MISC(commands.Cog):
 
     def __init__(self, bot):
         self.client = bot
-    # Beginning of misc commands I made for this bot
+    # Beginning of misc commands I made for this bot.
+    # CURRENTLY NO COMMANDS FOR THIS FOLDER, SOON THOUGH
     @commands.Cog.listener()
     async def on_ready(self):
         print("misc commands: Active")
 
-    @commands.command()
-    async def hello(ctx):
-        await ctx.send('hello')
     # Need to find a way where only a person with permision can execute this
     # @commands.command()
     # async def wipe(self, ctx, amount=5):
