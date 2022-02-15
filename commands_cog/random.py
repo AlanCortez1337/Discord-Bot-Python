@@ -26,8 +26,8 @@ class Random(commands.Cog):
             await ctx.send(f'I choose that you do: {choices[randChoice]}')
 
 
-
-    @commands.command() # rolls a die or just a number
+    # ROLL FOR ME
+    @commands.command()
     # input is !roll d#
     async def roll(self, ctx, *, input):
         #add a feature to celebrate if it is the max or min number

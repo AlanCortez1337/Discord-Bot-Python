@@ -29,7 +29,7 @@ class TEXTEVENTS(commands.Cog):
             # Before sending the annoying gif I made it specifically always send
             # whenever the 'TARGET-PERSON' sent a message containing the word
             # "your" but a 1/20 chance for everyone else
-            if message.author.id == os.getenv('TARGET-PERSON'):
+            if message.author.id == int(os.getenv('TARGET-PERSON')):
                 await message.channel.send('https://tenor.com/view/youre-spelling-mistake-metal-gear-rising-itsyoure-gif-23889242')
             elif chanceOfCorrection == 20:
                 await message.channel.send('https://tenor.com/view/youre-spelling-mistake-metal-gear-rising-itsyoure-gif-23889242')

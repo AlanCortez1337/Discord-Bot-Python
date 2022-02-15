@@ -37,4 +37,4 @@ for filename in os.listdir('./commands_cog'):
     if filename.endswith('.py'):
         bot.load_extension(f'commands_cog.{filename[:-3]}')
 
-bot.run('ODUxNTQ1MDMwMjM4MDExNDEy.YL51HA.hmidiV1LNmmEBe8Ntb4Zksy594E')
+bot.run(os.getenv('BOT-KEY'))
