@@ -56,7 +56,7 @@ Well for this one there really is not an elaborate reason for making this featur
 
 Have you ever been indecisive about what you choose next? Well this command solve that problem. Reading the entire message after the command prefix, this command will break up each option between the white space and randomly select from list of options inputted.
 
-**How to call it:**``mister please option1 option2 option3``
+**How to call it:**``mister please choose option1 option2 option3``
 
 #### *ROLL FOR ME*
 
