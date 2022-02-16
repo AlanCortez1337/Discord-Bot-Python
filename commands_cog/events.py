@@ -41,6 +41,18 @@ class TEXTEVENTS(commands.Cog):
             await message.add_reaction('😳')
         elif luckyNum == 1:
             await message.add_reaction('😨')
+    # LOAD SUCCESSFUL
+    @commands.Cog.listener("on_message")
+    @commands.Cog.has_permissions(administrator = True)
+    async def successfulExecution(ctx, message):
+        input = message.content
+
+        reload = 'reload'
+        load = 'load'
+        unload = 'unload'
+
+        if ("mister please %s" %(reload)) in input:
+            await message.add_reaction('👍')
 
 def setup(bot):
     bot.add_cog(TEXTEVENTS(bot))
