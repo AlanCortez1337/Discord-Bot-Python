@@ -43,16 +43,19 @@ class TEXTEVENTS(commands.Cog):
             await message.add_reaction('😨')
     # LOAD SUCCESSFUL
     @commands.Cog.listener("on_message")
-    @commands.Cog.has_permissions(administrator = True)
+    #TODO:
+    #fix permissions
+    #add comments about the loadWords for loop thing
+    @commands.has_role("Big Cheeses")
     async def successfulExecution(ctx, message):
         input = message.content
 
-        reload = 'reload'
-        load = 'load'
-        unload = 'unload'
-
-        if ("mister please %s" %(reload)) in input:
-            await message.add_reaction('👍')
+        loadWords = ['reload', 'load', 'unload']
+        for words in loadWords:
+            if not (message.author.guild_permissions.administrator):
+                await message.add_reaction('👎')
+            elif ("mister please %s" %(words)) in input:
+                await message.add_reaction('👍')
 
 def setup(bot):
     bot.add_cog(TEXTEVENTS(bot))
