@@ -17,6 +17,7 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         await ctx.send('Please include additional information for the command')
     if isinstance(error, commands.MissingPermissions):
+        await ctx.message.add_reaction('👎')
         await ctx.send('Sorry man get good? You don\'t have permissions for this')
 
 @bot.command()
